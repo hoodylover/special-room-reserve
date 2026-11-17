@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+:root {
+  font-family:
+    "Pretendard", "Apple SD Gothic Neo", "Malgun Gothic", "Noto Sans KR", system-ui, -apple-system,
+    sans-serif;
+  color-scheme: light;
+}
+
+input,
+select,
+textarea,
+button {
+  font: inherit;
+}
+
+@layer components {
+  .field {
+    @apply w-full rounded-xl border border-slate-300 bg-white px-3 py-2.5 text-base outline-none focus:border-sky-500 focus:ring-2 focus:ring-sky-200 aria-[invalid=true]:border-rose-400 aria-[invalid=true]:ring-rose-100;
+  }
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-xl bg-sky-700 px-4 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-sky-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-700 disabled:opacity-60;
+  }
+  .btn-secondary {
+    @apply inline-flex items-center justify-center rounded-xl bg-white px-4 py-2.5 text-sm font-semibold text-slate-700 ring-1 ring-inset ring-slate-300 hover:bg-slate-50;
+  }
+  .btn-danger {
+    @apply inline-flex items-center justify-center rounded-xl bg-rose-600 px-4 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-rose-700;
+  }
+  .btn-ghost {
+    @apply inline-flex size-10 items-center justify-center rounded-xl text-2xl leading-none text-slate-500 hover:bg-slate-100;
+  }
+  .btn-sm {
+    @apply inline-flex items-center justify-center rounded-lg px-3 py-1.5 text-sm font-semibold;
+  }
+}
